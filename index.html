@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小三數學教育實驗網頁索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
+            color: #7f8c8d;
+            font-weight: 300;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .demo-button {
+            padding: 3rem 2rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 3rem;
+            font-weight: normal;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            color: white;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-color: #bbb;
+        }
+
+        .demo-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-mic {
+            background: #e74c3c;
+            border-color: #c0392b;
+        }
+
+        .button-mic:hover {
+            background: #c0392b;
+        }
+
+        .button-one {
+            background: #3498db;
+            border-color: #2980b9;
+        }
+
+        .button-one:hover {
+            background: #2980b9;
+        }
+
+        .button-two {
+            background: #2ecc71;
+            border-color: #27ae60;
+        }
+
+        .button-two:hover {
+            background: #27ae60;
+        }
+
+        .button-three {
+            background: #9b59b6;
+            border-color: #8e44ad;
+        }
+
+        .button-three:hover {
+            background: #8e44ad;
+        }
+
+        .footer {
+            margin-top: 4rem;
+            color: #95a5a6;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        /* 平板橫屏優化 */
+        @media (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .button-grid {
+                gap: 3rem;
+                max-width: 1000px;
+            }
+            
+            .demo-button {
+                min-height: 160px;
+                font-size: 2.5rem;
+                padding: 2rem 1.5rem;
+            }
+            
+            .footer {
+                margin-top: 2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* 手機直屏備用 */
+        @media (max-width: 767px) {
+            .button-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                max-width: 400px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .demo-button {
+                min-height: 120px;
+                font-size: 2rem;
+            }
+        }
+
+        /* 大屏幕優化 */
+        @media (min-width: 1025px) {
+            .button-grid {
+                gap: 6rem;
+            }
+            
+            .demo-button {
+                min-height: 220px;
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>小三數學教育實驗</h1>
+        <p class="subtitle">請選擇實驗分頁</p>
+        
+        <div class="button-grid">
+            <a href="https://run.pavlovia.org/IPWan/g3-warmup-0609" class="demo-button button-mic" target="_blank">
+                🎤
+            </a>
+            <a href="https://run.pavlovia.org/IPWan/g3-exp1-0609" class="demo-button button-one" target="_blank">
+                1️⃣
+            </a>
+            <a href="https://run.pavlovia.org/IPWan/g3-exp2-0609" class="demo-button button-two" target="_blank">
+                2️⃣
+            </a>
+            <a href="https://run.pavlovia.org/IPWan/g3-exp3-0609" class="demo-button button-three" target="_blank">
+                3️⃣
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>國立政治大學語音暨心理語言綜合實驗室 2025 June</p>
+        </div>
+    </div>
+
+    <script>
+        // 簡單的點擊反饋
+        document.querySelectorAll('.demo-button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'translateY(0)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
